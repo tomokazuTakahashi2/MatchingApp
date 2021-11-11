@@ -3,27 +3,46 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		646AB8EB273BDB8B00CC905A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB8EA273BDB8B00CC905A /* AppDelegate.swift */; };
 		646AB8ED273BDB8B00CC905A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB8EC273BDB8B00CC905A /* SceneDelegate.swift */; };
-		646AB8EF273BDB8B00CC905A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB8EE273BDB8B00CC905A /* ViewController.swift */; };
-		646AB8F2273BDB8B00CC905A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646AB8F0273BDB8B00CC905A /* Main.storyboard */; };
+		646AB8EF273BDB8B00CC905A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB8EE273BDB8B00CC905A /* HomeViewController.swift */; };
 		646AB8F4273BDB8D00CC905A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646AB8F3273BDB8D00CC905A /* Assets.xcassets */; };
 		646AB8F7273BDB8D00CC905A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646AB8F5273BDB8D00CC905A /* LaunchScreen.storyboard */; };
+		646AB901273C112B00CC905A /* BottomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB900273C112B00CC905A /* BottomControlView.swift */; };
+		646AB904273C1E4200CC905A /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB903273C1E4200CC905A /* UIImage-Extension.swift */; };
+		646AB906273CB6A800CC905A /* TopControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB905273CB6A800CC905A /* TopControlView.swift */; };
+		646AB909273CBF1000CC905A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 646AB908273CBF1000CC905A /* RxSwift */; };
+		646AB90B273CBF1000CC905A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 646AB90A273CBF1000CC905A /* RxCocoa */; };
+		646AB90D273CBF1000CC905A /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 646AB90C273CBF1000CC905A /* RxRelay */; };
+		646AB90F273CCC5100CC905A /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB90E273CCC5100CC905A /* UIView-Extension.swift */; };
+		646AB911273CD37100CC905A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB910273CD37100CC905A /* CardView.swift */; };
+		646AB913273D009D00CC905A /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB912273D009D00CC905A /* UIColor-Extension.swift */; };
+		646AB915273D1CFC00CC905A /* CardInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB914273D1CFC00CC905A /* CardInfoLabel.swift */; };
+		646AB917273D22AD00CC905A /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB916273D22AD00CC905A /* UIButton-Extension.swift */; };
+		646AB919273D23C400CC905A /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB918273D23C400CC905A /* CardImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		646AB8E7273BDB8B00CC905A /* MatchingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646AB8EA273BDB8B00CC905A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646AB8EC273BDB8B00CC905A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		646AB8EE273BDB8B00CC905A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		646AB8F1273BDB8B00CC905A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		646AB8EE273BDB8B00CC905A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		646AB8F3273BDB8D00CC905A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		646AB8F6273BDB8D00CC905A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		646AB8F8273BDB8D00CC905A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		646AB900273C112B00CC905A /* BottomControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlView.swift; sourceTree = "<group>"; };
+		646AB903273C1E4200CC905A /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
+		646AB905273CB6A800CC905A /* TopControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlView.swift; sourceTree = "<group>"; };
+		646AB90E273CCC5100CC905A /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		646AB910273CD37100CC905A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		646AB912273D009D00CC905A /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		646AB914273D1CFC00CC905A /* CardInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoLabel.swift; sourceTree = "<group>"; };
+		646AB916273D22AD00CC905A /* UIButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		646AB918273D23C400CC905A /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646AB90D273CBF1000CC905A /* RxRelay in Frameworks */,
+				646AB90B273CBF1000CC905A /* RxCocoa in Frameworks */,
+				646AB909273CBF1000CC905A /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,47 @@
 		646AB8E9273BDB8B00CC905A /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				646AB902273C1E2400CC905A /* Extensions */,
+				646AB8FF273C10F800CC905A /* Views */,
+				646AB8FE273C10A400CC905A /* ViewControllers */,
 				646AB8EA273BDB8B00CC905A /* AppDelegate.swift */,
 				646AB8EC273BDB8B00CC905A /* SceneDelegate.swift */,
-				646AB8EE273BDB8B00CC905A /* ViewController.swift */,
-				646AB8F0273BDB8B00CC905A /* Main.storyboard */,
 				646AB8F3273BDB8D00CC905A /* Assets.xcassets */,
 				646AB8F5273BDB8D00CC905A /* LaunchScreen.storyboard */,
 				646AB8F8273BDB8D00CC905A /* Info.plist */,
 			);
 			path = MatchingApp;
+			sourceTree = "<group>";
+		};
+		646AB8FE273C10A400CC905A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				646AB8EE273BDB8B00CC905A /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		646AB8FF273C10F800CC905A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				646AB900273C112B00CC905A /* BottomControlView.swift */,
+				646AB905273CB6A800CC905A /* TopControlView.swift */,
+				646AB910273CD37100CC905A /* CardView.swift */,
+				646AB914273D1CFC00CC905A /* CardInfoLabel.swift */,
+				646AB918273D23C400CC905A /* CardImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		646AB902273C1E2400CC905A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				646AB903273C1E4200CC905A /* UIImage-Extension.swift */,
+				646AB90E273CCC5100CC905A /* UIView-Extension.swift */,
+				646AB912273D009D00CC905A /* UIColor-Extension.swift */,
+				646AB916273D22AD00CC905A /* UIButton-Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +137,11 @@
 			dependencies = (
 			);
 			name = MatchingApp;
+			packageProductDependencies = (
+				646AB908273CBF1000CC905A /* RxSwift */,
+				646AB90A273CBF1000CC905A /* RxCocoa */,
+				646AB90C273CBF1000CC905A /* RxRelay */,
+			);
 			productName = MatchingApp;
 			productReference = 646AB8E7273BDB8B00CC905A /* MatchingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 646AB8DE273BDB8B00CC905A;
+			packageReferences = (
+				646AB907273CBF1000CC905A /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 646AB8E8273BDB8B00CC905A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +188,6 @@
 			files = (
 				646AB8F7273BDB8D00CC905A /* LaunchScreen.storyboard in Resources */,
 				646AB8F4273BDB8D00CC905A /* Assets.xcassets in Resources */,
-				646AB8F2273BDB8B00CC905A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +198,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				646AB8EF273BDB8B00CC905A /* ViewController.swift in Sources */,
+				646AB906273CB6A800CC905A /* TopControlView.swift in Sources */,
+				646AB8EF273BDB8B00CC905A /* HomeViewController.swift in Sources */,
+				646AB915273D1CFC00CC905A /* CardInfoLabel.swift in Sources */,
 				646AB8EB273BDB8B00CC905A /* AppDelegate.swift in Sources */,
+				646AB90F273CCC5100CC905A /* UIView-Extension.swift in Sources */,
+				646AB913273D009D00CC905A /* UIColor-Extension.swift in Sources */,
+				646AB917273D22AD00CC905A /* UIButton-Extension.swift in Sources */,
 				646AB8ED273BDB8B00CC905A /* SceneDelegate.swift in Sources */,
+				646AB901273C112B00CC905A /* BottomControlView.swift in Sources */,
+				646AB911273CD37100CC905A /* CardView.swift in Sources */,
+				646AB919273D23C400CC905A /* CardImageView.swift in Sources */,
+				646AB904273C1E4200CC905A /* UIImage-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		646AB8F0273BDB8B00CC905A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				646AB8F1273BDB8B00CC905A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		646AB8F5273BDB8D00CC905A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,6 +403,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		646AB907273CBF1000CC905A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		646AB908273CBF1000CC905A /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646AB907273CBF1000CC905A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		646AB90A273CBF1000CC905A /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646AB907273CBF1000CC905A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		646AB90C273CBF1000CC905A /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646AB907273CBF1000CC905A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 646AB8DF273BDB8B00CC905A /* Project object */;
 }
