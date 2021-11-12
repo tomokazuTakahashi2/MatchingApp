@@ -24,11 +24,11 @@
 		646AB915273D1CFC00CC905A /* CardInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB914273D1CFC00CC905A /* CardInfoLabel.swift */; };
 		646AB917273D22AD00CC905A /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB916273D22AD00CC905A /* UIButton-Extension.swift */; };
 		646AB919273D23C400CC905A /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB918273D23C400CC905A /* CardImageView.swift */; };
-		646AB91B273D45DA00CC905A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 646AB91A273D45DA00CC905A /* GoogleService-Info.plist */; };
 		646AB91D273D47F000CC905A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB91C273D47F000CC905A /* RegisterViewController.swift */; };
 		646AB921273D608800CC905A /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB920273D608800CC905A /* RegisterTextField.swift */; };
 		646AB923273DFD1000CC905A /* RegisterTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB922273DFD1000CC905A /* RegisterTitleLabel.swift */; };
 		646AB925273E009800CC905A /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB924273E009800CC905A /* RegisterButton.swift */; };
+		646AB927273E433800CC905A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 646AB926273E433700CC905A /* GoogleService-Info.plist */; };
 		ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,11 +51,11 @@
 		646AB914273D1CFC00CC905A /* CardInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoLabel.swift; sourceTree = "<group>"; };
 		646AB916273D22AD00CC905A /* UIButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		646AB918273D23C400CC905A /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
-		646AB91A273D45DA00CC905A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		646AB91C273D47F000CC905A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		646AB920273D608800CC905A /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
 		646AB922273DFD1000CC905A /* RegisterTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTitleLabel.swift; sourceTree = "<group>"; };
 		646AB924273E009800CC905A /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
+		646AB926273E433700CC905A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +101,7 @@
 				646AB8EA273BDB8B00CC905A /* AppDelegate.swift */,
 				646AB8EC273BDB8B00CC905A /* SceneDelegate.swift */,
 				646AB8F3273BDB8D00CC905A /* Assets.xcassets */,
-				646AB91A273D45DA00CC905A /* GoogleService-Info.plist */,
+				646AB926273E433700CC905A /* GoogleService-Info.plist */,
 				646AB8F5273BDB8D00CC905A /* LaunchScreen.storyboard */,
 				646AB8F8273BDB8D00CC905A /* Info.plist */,
 			);
@@ -244,7 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				646AB8F7273BDB8D00CC905A /* LaunchScreen.storyboard in Resources */,
-				646AB91B273D45DA00CC905A /* GoogleService-Info.plist in Resources */,
+				646AB927273E433800CC905A /* GoogleService-Info.plist in Resources */,
 				646AB8F4273BDB8D00CC905A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
