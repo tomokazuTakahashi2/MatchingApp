@@ -24,9 +24,17 @@
 		646AB915273D1CFC00CC905A /* CardInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB914273D1CFC00CC905A /* CardInfoLabel.swift */; };
 		646AB917273D22AD00CC905A /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB916273D22AD00CC905A /* UIButton-Extension.swift */; };
 		646AB919273D23C400CC905A /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB918273D23C400CC905A /* CardImageView.swift */; };
+		646AB91B273D45DA00CC905A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 646AB91A273D45DA00CC905A /* GoogleService-Info.plist */; };
+		646AB91D273D47F000CC905A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB91C273D47F000CC905A /* RegisterViewController.swift */; };
+		646AB921273D608800CC905A /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB920273D608800CC905A /* RegisterTextField.swift */; };
+		646AB923273DFD1000CC905A /* RegisterTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB922273DFD1000CC905A /* RegisterTitleLabel.swift */; };
+		646AB925273E009800CC905A /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB924273E009800CC905A /* RegisterButton.swift */; };
+		ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49AB60C2382A16FC13F7BB2C /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
 		646AB8E7273BDB8B00CC905A /* MatchingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646AB8EA273BDB8B00CC905A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646AB8EC273BDB8B00CC905A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,12 @@
 		646AB914273D1CFC00CC905A /* CardInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoLabel.swift; sourceTree = "<group>"; };
 		646AB916273D22AD00CC905A /* UIButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		646AB918273D23C400CC905A /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
+		646AB91A273D45DA00CC905A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		646AB91C273D47F000CC905A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		646AB920273D608800CC905A /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
+		646AB922273DFD1000CC905A /* RegisterTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTitleLabel.swift; sourceTree = "<group>"; };
+		646AB924273E009800CC905A /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
+		78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,7 @@
 				646AB90D273CBF1000CC905A /* RxRelay in Frameworks */,
 				646AB90B273CBF1000CC905A /* RxCocoa in Frameworks */,
 				646AB909273CBF1000CC905A /* RxSwift in Frameworks */,
+				ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +79,8 @@
 			children = (
 				646AB8E9273BDB8B00CC905A /* MatchingApp */,
 				646AB8E8273BDB8B00CC905A /* Products */,
+				98CEA58B368EEECD7250E945 /* Pods */,
+				AD8EE3847F6A6CFA3972645E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +101,7 @@
 				646AB8EA273BDB8B00CC905A /* AppDelegate.swift */,
 				646AB8EC273BDB8B00CC905A /* SceneDelegate.swift */,
 				646AB8F3273BDB8D00CC905A /* Assets.xcassets */,
+				646AB91A273D45DA00CC905A /* GoogleService-Info.plist */,
 				646AB8F5273BDB8D00CC905A /* LaunchScreen.storyboard */,
 				646AB8F8273BDB8D00CC905A /* Info.plist */,
 			);
@@ -94,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				646AB8EE273BDB8B00CC905A /* HomeViewController.swift */,
+				646AB91C273D47F000CC905A /* RegisterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -101,11 +120,8 @@
 		646AB8FF273C10F800CC905A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				646AB900273C112B00CC905A /* BottomControlView.swift */,
-				646AB905273CB6A800CC905A /* TopControlView.swift */,
-				646AB910273CD37100CC905A /* CardView.swift */,
-				646AB914273D1CFC00CC905A /* CardInfoLabel.swift */,
-				646AB918273D23C400CC905A /* CardImageView.swift */,
+				646AB91F273D606500CC905A /* Register */,
+				646AB91E273D605300CC905A /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +137,45 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		646AB91E273D605300CC905A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				646AB900273C112B00CC905A /* BottomControlView.swift */,
+				646AB905273CB6A800CC905A /* TopControlView.swift */,
+				646AB910273CD37100CC905A /* CardView.swift */,
+				646AB914273D1CFC00CC905A /* CardInfoLabel.swift */,
+				646AB918273D23C400CC905A /* CardImageView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		646AB91F273D606500CC905A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				646AB920273D608800CC905A /* RegisterTextField.swift */,
+				646AB922273DFD1000CC905A /* RegisterTitleLabel.swift */,
+				646AB924273E009800CC905A /* RegisterButton.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		98CEA58B368EEECD7250E945 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */,
+				49AB60C2382A16FC13F7BB2C /* Pods-MatchingApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD8EE3847F6A6CFA3972645E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 646AB8FB273BDB8D00CC905A /* Build configuration list for PBXNativeTarget "MatchingApp" */;
 			buildPhases = (
+				471BA3A1384CED88B0429EA4 /* [CP] Check Pods Manifest.lock */,
 				646AB8E3273BDB8B00CC905A /* Sources */,
 				646AB8E4273BDB8B00CC905A /* Frameworks */,
 				646AB8E5273BDB8B00CC905A /* Resources */,
+				9C7DEC6B1CA951AD65C0C35E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,26 +244,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				646AB8F7273BDB8D00CC905A /* LaunchScreen.storyboard in Resources */,
+				646AB91B273D45DA00CC905A /* GoogleService-Info.plist in Resources */,
 				646AB8F4273BDB8D00CC905A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		471BA3A1384CED88B0429EA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatchingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C7DEC6B1CA951AD65C0C35E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MatchingApp/Pods-MatchingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MatchingApp/Pods-MatchingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MatchingApp/Pods-MatchingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		646AB8E3273BDB8B00CC905A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646AB925273E009800CC905A /* RegisterButton.swift in Sources */,
 				646AB906273CB6A800CC905A /* TopControlView.swift in Sources */,
 				646AB8EF273BDB8B00CC905A /* HomeViewController.swift in Sources */,
+				646AB923273DFD1000CC905A /* RegisterTitleLabel.swift in Sources */,
 				646AB915273D1CFC00CC905A /* CardInfoLabel.swift in Sources */,
 				646AB8EB273BDB8B00CC905A /* AppDelegate.swift in Sources */,
 				646AB90F273CCC5100CC905A /* UIView-Extension.swift in Sources */,
 				646AB913273D009D00CC905A /* UIColor-Extension.swift in Sources */,
 				646AB917273D22AD00CC905A /* UIButton-Extension.swift in Sources */,
 				646AB8ED273BDB8B00CC905A /* SceneDelegate.swift in Sources */,
+				646AB91D273D47F000CC905A /* RegisterViewController.swift in Sources */,
 				646AB901273C112B00CC905A /* BottomControlView.swift in Sources */,
+				646AB921273D608800CC905A /* RegisterTextField.swift in Sources */,
 				646AB911273CD37100CC905A /* CardView.swift in Sources */,
 				646AB919273D23C400CC905A /* CardImageView.swift in Sources */,
 				646AB904273C1E4200CC905A /* UIImage-Extension.swift in Sources */,
@@ -345,6 +449,7 @@
 		};
 		646AB8FC273BDB8D00CC905A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -364,6 +469,7 @@
 		};
 		646AB8FD273BDB8D00CC905A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49AB60C2382A16FC13F7BB2C /* Pods-MatchingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
