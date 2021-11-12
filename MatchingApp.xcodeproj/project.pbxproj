@@ -29,6 +29,8 @@
 		646AB923273DFD1000CC905A /* RegisterTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB922273DFD1000CC905A /* RegisterTitleLabel.swift */; };
 		646AB925273E009800CC905A /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB924273E009800CC905A /* RegisterButton.swift */; };
 		646AB927273E433800CC905A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 646AB926273E433700CC905A /* GoogleService-Info.plist */; };
+		646AB92A273E458A00CC905A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB929273E458A00CC905A /* RegisterViewModel.swift */; };
+		646AB92C273E653D00CC905A /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB92B273E653D00CC905A /* Firebase-Extension.swift */; };
 		ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		646AB922273DFD1000CC905A /* RegisterTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTitleLabel.swift; sourceTree = "<group>"; };
 		646AB924273E009800CC905A /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		646AB926273E433700CC905A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		646AB929273E458A00CC905A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		646AB92B273E653D00CC905A /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
 		78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,7 @@
 		646AB8E9273BDB8B00CC905A /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				646AB928273E455B00CC905A /* ViewModel */,
 				646AB902273C1E2400CC905A /* Extensions */,
 				646AB8FF273C10F800CC905A /* Views */,
 				646AB8FE273C10A400CC905A /* ViewControllers */,
@@ -133,6 +138,7 @@
 				646AB90E273CCC5100CC905A /* UIView-Extension.swift */,
 				646AB912273D009D00CC905A /* UIColor-Extension.swift */,
 				646AB916273D22AD00CC905A /* UIButton-Extension.swift */,
+				646AB92B273E653D00CC905A /* Firebase-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,6 +163,14 @@
 				646AB924273E009800CC905A /* RegisterButton.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		646AB928273E455B00CC905A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				646AB929273E458A00CC905A /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		98CEA58B368EEECD7250E945 /* Pods */ = {
@@ -306,7 +320,9 @@
 				646AB8EB273BDB8B00CC905A /* AppDelegate.swift in Sources */,
 				646AB90F273CCC5100CC905A /* UIView-Extension.swift in Sources */,
 				646AB913273D009D00CC905A /* UIColor-Extension.swift in Sources */,
+				646AB92C273E653D00CC905A /* Firebase-Extension.swift in Sources */,
 				646AB917273D22AD00CC905A /* UIButton-Extension.swift in Sources */,
+				646AB92A273E458A00CC905A /* RegisterViewModel.swift in Sources */,
 				646AB8ED273BDB8B00CC905A /* SceneDelegate.swift in Sources */,
 				646AB91D273D47F000CC905A /* RegisterViewController.swift in Sources */,
 				646AB901273C112B00CC905A /* BottomControlView.swift in Sources */,
