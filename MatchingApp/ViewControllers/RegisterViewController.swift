@@ -147,6 +147,7 @@ class RegisterViewController: UIViewController {
         Auth.createUserToFireAuth(email: email, password: password, name: name) { succces in
             if succces {
                 print("処理が完了")
+                self.dismiss(animated: true) //処理が完了したらHome画面へ戻る
             } else {
                 
             }

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         //起動時の画面
-        window?.rootViewController = RegisterViewController()
+        window?.rootViewController = HomeViewController()
         
         return true
     }
