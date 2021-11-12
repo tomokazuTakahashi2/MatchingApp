@@ -6,18 +6,37 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
+    
+    let logoutButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("ログアウト", for: .normal)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupLayout()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//            let registerController = RegisterViewController()
+//            let nav = UINavigationController(rootViewController: registerController)
+//            nav.modalPresentationStyle = .fullScreen //フルスクリーン遷移
+//            self.present(nav, animated: true) //まずは登録画面へ遷移
+//        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //ログイン情報(uid)がnilだったら、登録画面へ遷移
+        if Auth.auth().currentUser?.uid == nil {
             let registerController = RegisterViewController()
-            registerController.modalPresentationStyle = .fullScreen //フルスクリーン遷移
-            self.present(registerController, animated: true) //まずは登録画面へ遷移
+            let nav = UINavigationController(rootViewController: registerController)
+            nav.modalPresentationStyle = .fullScreen //フルスクリーン遷移
+            self.present(nav, animated: true) //まずは登録画面へ遷移
         }
     }
     
@@ -33,6 +52,7 @@ class HomeViewController: UIViewController {
         stackView.axis = .vertical //縦方向に
         
         self.view.addSubview(stackView)
+        self.view.addSubview(logoutButton)
         
         [
             topControlView.heightAnchor.constraint(equalToConstant: 100),
@@ -43,6 +63,22 @@ class HomeViewController: UIViewController {
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor)]
             .forEach {$0.isActive = true}
+        
+        logoutButton.anchor(bottom: view.bottomAnchor, left: view.leftAnchor, bottomPadding: 10, leftPadding: 10)
+        logoutButton.addTarget(self, action: #selector(tappedLogoutButton), for: .touchUpInside)
+    }
+    
+    @objc private func tappedLogoutButton() {
+        
+        do {
+            try Auth.auth().signOut()
+            let registerController = RegisterViewController()
+            let nav = UINavigationController(rootViewController: registerController)
+            nav.modalPresentationStyle = .fullScreen //フルスクリーン遷移
+            self.present(nav, animated: true) //登録画面へ遷移
+        } catch {
+            print("ログアウトに失敗: ", error)
+        }
     }
 
 }

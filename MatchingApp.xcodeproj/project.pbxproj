@@ -31,6 +31,7 @@
 		646AB927273E433800CC905A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 646AB926273E433700CC905A /* GoogleService-Info.plist */; };
 		646AB92A273E458A00CC905A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB929273E458A00CC905A /* RegisterViewModel.swift */; };
 		646AB92C273E653D00CC905A /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB92B273E653D00CC905A /* Firebase-Extension.swift */; };
+		646AB92E273EB7AE00CC905A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB92D273EB7AD00CC905A /* LoginViewController.swift */; };
 		ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		646AB926273E433700CC905A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		646AB929273E458A00CC905A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		646AB92B273E653D00CC905A /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
+		646AB92D273EB7AD00CC905A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 			children = (
 				646AB8EE273BDB8B00CC905A /* HomeViewController.swift */,
 				646AB91C273D47F000CC905A /* RegisterViewController.swift */,
+				646AB92D273EB7AD00CC905A /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				646AB906273CB6A800CC905A /* TopControlView.swift in Sources */,
 				646AB8EF273BDB8B00CC905A /* HomeViewController.swift in Sources */,
 				646AB923273DFD1000CC905A /* RegisterTitleLabel.swift in Sources */,
+				646AB92E273EB7AE00CC905A /* LoginViewController.swift in Sources */,
 				646AB915273D1CFC00CC905A /* CardInfoLabel.swift in Sources */,
 				646AB8EB273BDB8B00CC905A /* AppDelegate.swift in Sources */,
 				646AB90F273CCC5100CC905A /* UIView-Extension.swift in Sources */,

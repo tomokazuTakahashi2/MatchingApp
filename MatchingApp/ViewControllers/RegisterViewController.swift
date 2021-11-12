@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController {
     private let viewModel = RegisterViewModel()
     
     //MARK: -UIViews
-    private let titleLabel = RegisterTitleLabel()
+    private let titleLabel = RegisterTitleLabel(text: "Tinder")
     
     private let nameTextField = RegisterTextField(placeHolder: "名前")
     private let emailTextField = RegisterTextField(placeHolder: "メールアドレス")
@@ -46,7 +46,7 @@ class RegisterViewController: UIViewController {
 //        return textField
 //    }()
     
-    private let registerButton = RegisterButton()
+    private let registerButton = RegisterButton(text: "登録")
     //↑に替わる
 //    let registerButton: UIButton = {
 //        let button = UIButton(type: .system)
@@ -57,6 +57,8 @@ class RegisterViewController: UIViewController {
 //        return button
 //    }()
     
+    private let alreadyHaveAccountButton = UIButton(type: .system).creatAboutAccountButton(text: "既にアカウントをお持ちの場合はこちら")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +66,14 @@ class RegisterViewController: UIViewController {
         setupLayout()
         setupBindings()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //ナビゲーションバーを非表示にする
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     //MARK: -Methods
     //グラデーション
     private func setupGradientLayer() {
@@ -78,9 +88,7 @@ class RegisterViewController: UIViewController {
     }
     
     private func setupLayout() {
-        
         passwordTextField.isSecureTextEntry = true //パスワードを非表示
-        view.backgroundColor = .yellow
         
         let baseStackView = UIStackView(arrangedSubviews: [nameTextField, emailTextField, passwordTextField, registerButton])
         baseStackView.axis = .vertical
@@ -89,10 +97,12 @@ class RegisterViewController: UIViewController {
         
         view.addSubview(baseStackView)
         view.addSubview(titleLabel)
+        view.addSubview(alreadyHaveAccountButton)
         
         nameTextField.anchor(height: 45)
         baseStackView.anchor(left: view.leftAnchor, right: view.rightAnchor, centerY: view.centerYAnchor,  leftPadding: 40, rightPadding: 40)
         titleLabel.anchor(bottom: baseStackView.topAnchor, centerX: view.centerXAnchor, bottomPadding: 20)
+        alreadyHaveAccountButton.anchor(top: baseStackView.bottomAnchor, centerX: view.centerXAnchor, topPadding: 20)
     }
     
     private func setupBindings() {
@@ -120,12 +130,20 @@ class RegisterViewController: UIViewController {
                 //textの情報ハンドル
             }
             .disposed(by: disposeBag)
-        
-        registerButton.rx.tap
+        //Buttonのバインディング
+        registerButton.rx.tap //登録ボタン
             .asDriver()
             .drive {  [weak self] _ in
                 //登録時の処理
                 self?.createUser()
+            }
+            .disposed(by: disposeBag)
+        
+        alreadyHaveAccountButton.rx.tap //既にアカウントをお持ちの場合は〜ボタン
+            .asDriver()
+            .drive {  [weak self] _ in
+                let login = LoginViewController()
+                self?.navigationController?.pushViewController(login, animated: true)
             }
             .disposed(by: disposeBag)
         
