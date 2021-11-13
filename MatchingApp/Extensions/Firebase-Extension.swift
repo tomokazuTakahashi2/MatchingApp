@@ -10,7 +10,7 @@ import Firebase
 //MARK: - Auth
 extension Auth {
     //firebase/Authにログイン情報を保存
-    static func createUserToFireAuth(email: String?, password: String?, name: String?, completion: @escaping (Bool) -> ()) {
+    static func createUserToFireAuth(email: String?, password: String?, name: String?, completion: @escaping (Bool) -> Void) {
         guard let email = email else { return }
         guard let password = password else { return }
         
@@ -28,7 +28,7 @@ extension Auth {
         }
     }
     
-    static func loginWithFireAuth(email: String, password: String, completion: @escaping (Bool) -> ()) {
+    static func loginWithFireAuth(email: String, password: String, completion: @escaping (Bool) -> Void) {
         
         Auth.auth().signIn(withEmail: email, password: password) { res, err in
             if let err = err {
@@ -45,7 +45,7 @@ extension Auth {
 //MARK: - Firestore
 extension Firestore {
     //firestoreへの保存
-    static func setUserDataToFirestore(email: String, uid: String, name: String?, completion: @escaping (Bool) -> ()) {
+    static func setUserDataToFirestore(email: String, uid: String, name: String?, completion: @escaping (Bool) -> Void) {
         guard let name = name else { return }
         
         let document = [
@@ -66,7 +66,7 @@ extension Firestore {
     }
     
     //Firestoreからユーザー情報を取得
-    static func fetchUserFromFirestore(uid: String, completion: @escaping (User?) -> ()) {
+    static func fetchUserFromFirestore(uid: String, completion: @escaping (User?) -> Void) {
         
         Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
             if let err = err {
@@ -81,6 +81,25 @@ extension Firestore {
 
         }
         
+    }
+    
+    //Firestoreから自分以外のユーザー情報を取得
+    static func fetchUsersFromFirestore(completion: @escaping ([User]) -> Void) {
+        
+        
+        Firestore.firestore().collection("users").getDocuments { (snapshots, err) in
+            if let err = err {
+                print("ユーザー情報の取得に失敗: ", err)
+                return
+            }
+            
+            let users = snapshots?.documents.map({ (snapshot) -> User in
+                let dic = snapshot.data()
+                let user = User(dic: dic)
+                return user
+            })
+            completion(users ?? [User]())
+        }
     }
     
 }
