@@ -32,6 +32,8 @@
 		646AB92A273E458A00CC905A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB929273E458A00CC905A /* RegisterViewModel.swift */; };
 		646AB92C273E653D00CC905A /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB92B273E653D00CC905A /* Firebase-Extension.swift */; };
 		646AB92E273EB7AE00CC905A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB92D273EB7AD00CC905A /* LoginViewController.swift */; };
+		646AB931273F733300CC905A /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 646AB930273F733300CC905A /* PKHUD */; };
+		646AB934273F7D6200CC905A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB933273F7D6200CC905A /* User.swift */; };
 		ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,7 @@
 		646AB929273E458A00CC905A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		646AB92B273E653D00CC905A /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
 		646AB92D273EB7AD00CC905A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		646AB933273F7D6200CC905A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +76,7 @@
 				646AB90D273CBF1000CC905A /* RxRelay in Frameworks */,
 				646AB90B273CBF1000CC905A /* RxCocoa in Frameworks */,
 				646AB909273CBF1000CC905A /* RxSwift in Frameworks */,
+				646AB931273F733300CC905A /* PKHUD in Frameworks */,
 				ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +105,7 @@
 		646AB8E9273BDB8B00CC905A /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				646AB932273F7D4A00CC905A /* Models */,
 				646AB928273E455B00CC905A /* ViewModel */,
 				646AB902273C1E2400CC905A /* Extensions */,
 				646AB8FF273C10F800CC905A /* Views */,
@@ -176,6 +181,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		646AB932273F7D4A00CC905A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				646AB933273F7D6200CC905A /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		98CEA58B368EEECD7250E945 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +228,7 @@
 				646AB908273CBF1000CC905A /* RxSwift */,
 				646AB90A273CBF1000CC905A /* RxCocoa */,
 				646AB90C273CBF1000CC905A /* RxRelay */,
+				646AB930273F733300CC905A /* PKHUD */,
 			);
 			productName = MatchingApp;
 			productReference = 646AB8E7273BDB8B00CC905A /* MatchingApp.app */;
@@ -245,6 +259,7 @@
 			mainGroup = 646AB8DE273BDB8B00CC905A;
 			packageReferences = (
 				646AB907273CBF1000CC905A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				646AB92F273F733300CC905A /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 646AB8E8273BDB8B00CC905A /* Products */;
 			projectDirPath = "";
@@ -323,6 +338,7 @@
 				646AB915273D1CFC00CC905A /* CardInfoLabel.swift in Sources */,
 				646AB8EB273BDB8B00CC905A /* AppDelegate.swift in Sources */,
 				646AB90F273CCC5100CC905A /* UIView-Extension.swift in Sources */,
+				646AB934273F7D6200CC905A /* User.swift in Sources */,
 				646AB913273D009D00CC905A /* UIColor-Extension.swift in Sources */,
 				646AB92C273E653D00CC905A /* Firebase-Extension.swift in Sources */,
 				646AB917273D22AD00CC905A /* UIButton-Extension.swift in Sources */,
@@ -539,6 +555,14 @@
 				version = 6.2.0;
 			};
 		};
+		646AB92F273F733300CC905A /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -556,6 +580,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 646AB907273CBF1000CC905A /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
+		};
+		646AB930273F733300CC905A /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646AB92F273F733300CC905A /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

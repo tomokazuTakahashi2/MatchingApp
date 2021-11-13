@@ -7,8 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class HomeViewController: UIViewController {
+    
+    private var user: User?
     
     let logoutButton: UIButton = {
         let button = UIButton(type: .system)
@@ -16,6 +19,7 @@ class HomeViewController: UIViewController {
         return button
     }()
 
+    // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,6 +33,18 @@ class HomeViewController: UIViewController {
 //        }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        //ログイン時にユーザー情報を取得
+        Firestore.fetchUserFromFirestore(uid: uid) { (user) in
+            if let user = user {
+                self.user = user
+            }
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //ログイン情報(uid)がnilだったら、登録画面へ遷移
@@ -39,6 +55,8 @@ class HomeViewController: UIViewController {
             self.present(nav, animated: true) //まずは登録画面へ遷移
         }
     }
+    
+    // MARK: - Methods
     
     private func setupLayout() {
         view.backgroundColor = .white
