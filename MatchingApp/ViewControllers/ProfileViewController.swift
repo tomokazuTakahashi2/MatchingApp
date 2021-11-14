@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    var user: User?
     private let cellId = "cellId"
     
     //MARK: - UIViews
@@ -41,6 +42,7 @@ class ProfileViewController: UIViewController {
         
         nameLabel.text = "test test"
         
+        //viewの配置を設定
         view.addSubview(saveButton)
         view.addSubview(logoutButton)
         view.addSubview(nameLabel)
@@ -54,6 +56,9 @@ class ProfileViewController: UIViewController {
         nameLabel.anchor(top: profileImageView.bottomAnchor, centerX: view.centerXAnchor, topPadding: 20)
         profileEditButton.anchor(top: profileImageView.topAnchor, right: profileImageView.rightAnchor, width: 60, height: 60)
         infoCollectionView.anchor(top: nameLabel.bottomAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, topPadding: 20)
+        
+        //ユーザー情報を反映
+        nameLabel.text = user?.name
     }
 }
 
@@ -65,6 +70,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = infoCollectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InfoCollectionViewCell
+        cell.user = self.user
         return cell
     }
 }
