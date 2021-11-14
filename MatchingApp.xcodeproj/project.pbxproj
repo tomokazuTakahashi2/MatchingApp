@@ -34,6 +34,9 @@
 		646AB92E273EB7AE00CC905A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB92D273EB7AD00CC905A /* LoginViewController.swift */; };
 		646AB931273F733300CC905A /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 646AB930273F733300CC905A /* PKHUD */; };
 		646AB934273F7D6200CC905A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB933273F7D6200CC905A /* User.swift */; };
+		646AB93627410F1A00CC905A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB93527410F1A00CC905A /* ProfileViewController.swift */; };
+		646AB9392741126600CC905A /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB9382741126600CC905A /* ProfileImageView.swift */; };
+		646AB93B2741133E00CC905A /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB93A2741133E00CC905A /* ProfileLabel.swift */; };
 		ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		646AB92B273E653D00CC905A /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
 		646AB92D273EB7AD00CC905A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		646AB933273F7D6200CC905A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		646AB93527410F1A00CC905A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		646AB9382741126600CC905A /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		646AB93A2741133E00CC905A /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
 		78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +132,7 @@
 				646AB8EE273BDB8B00CC905A /* HomeViewController.swift */,
 				646AB91C273D47F000CC905A /* RegisterViewController.swift */,
 				646AB92D273EB7AD00CC905A /* LoginViewController.swift */,
+				646AB93527410F1A00CC905A /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 		646AB8FF273C10F800CC905A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				646AB9372741124700CC905A /* Profile */,
 				646AB91F273D606500CC905A /* Register */,
 				646AB91E273D605300CC905A /* Home */,
 			);
@@ -187,6 +195,15 @@
 				646AB933273F7D6200CC905A /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		646AB9372741124700CC905A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				646AB9382741126600CC905A /* ProfileImageView.swift */,
+				646AB93A2741133E00CC905A /* ProfileLabel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		98CEA58B368EEECD7250E945 /* Pods */ = {
@@ -346,8 +363,11 @@
 				646AB8ED273BDB8B00CC905A /* SceneDelegate.swift in Sources */,
 				646AB91D273D47F000CC905A /* RegisterViewController.swift in Sources */,
 				646AB901273C112B00CC905A /* BottomControlView.swift in Sources */,
+				646AB9392741126600CC905A /* ProfileImageView.swift in Sources */,
+				646AB93B2741133E00CC905A /* ProfileLabel.swift in Sources */,
 				646AB921273D608800CC905A /* RegisterTextField.swift in Sources */,
 				646AB911273CD37100CC905A /* CardView.swift in Sources */,
+				646AB93627410F1A00CC905A /* ProfileViewController.swift in Sources */,
 				646AB919273D23C400CC905A /* CardImageView.swift in Sources */,
 				646AB904273C1E4200CC905A /* UIImage-Extension.swift in Sources */,
 			);
