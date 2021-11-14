@@ -20,10 +20,11 @@ class ProfileViewController: UIViewController {
     
     lazy var infoCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize //自動で大きさが変化
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.delegate = self
         cv.dataSource = self
-        cv.backgroundColor = .brown
+        cv.backgroundColor = .white
         cv.register(InfoCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         return cv
     }()
@@ -65,18 +66,5 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = infoCollectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InfoCollectionViewCell
         return cell
-    }
-}
-
-class InfoCollectionViewCell: UICollectionViewCell {
-    
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
-        
-        backgroundColor = .green
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

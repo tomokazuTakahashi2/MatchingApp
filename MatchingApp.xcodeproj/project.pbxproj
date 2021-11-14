@@ -37,6 +37,8 @@
 		646AB93627410F1A00CC905A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB93527410F1A00CC905A /* ProfileViewController.swift */; };
 		646AB9392741126600CC905A /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB9382741126600CC905A /* ProfileImageView.swift */; };
 		646AB93B2741133E00CC905A /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB93A2741133E00CC905A /* ProfileLabel.swift */; };
+		646AB93D27416C7000CC905A /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB93C27416C7000CC905A /* ProfileTextField.swift */; };
+		646AB9422741708900CC905A /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AB9412741708900CC905A /* InfoCollectionViewCell.swift */; };
 		ABB186BCABC596F3F59FDA08 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F098D9C3203278D00B73A /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		646AB93527410F1A00CC905A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		646AB9382741126600CC905A /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		646AB93A2741133E00CC905A /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
+		646AB93C27416C7000CC905A /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		646AB9412741708900CC905A /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		78B17A702D95A82EC9763E05 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,7 @@
 		646AB8E9273BDB8B00CC905A /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				646AB9402741705C00CC905A /* Cells */,
 				646AB932273F7D4A00CC905A /* Models */,
 				646AB928273E455B00CC905A /* ViewModel */,
 				646AB902273C1E2400CC905A /* Extensions */,
@@ -202,8 +207,17 @@
 			children = (
 				646AB9382741126600CC905A /* ProfileImageView.swift */,
 				646AB93A2741133E00CC905A /* ProfileLabel.swift */,
+				646AB93C27416C7000CC905A /* ProfileTextField.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		646AB9402741705C00CC905A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				646AB9412741708900CC905A /* InfoCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		98CEA58B368EEECD7250E945 /* Pods */ = {
@@ -347,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646AB9422741708900CC905A /* InfoCollectionViewCell.swift in Sources */,
 				646AB925273E009800CC905A /* RegisterButton.swift in Sources */,
 				646AB906273CB6A800CC905A /* TopControlView.swift in Sources */,
 				646AB8EF273BDB8B00CC905A /* HomeViewController.swift in Sources */,
@@ -358,6 +373,7 @@
 				646AB934273F7D6200CC905A /* User.swift in Sources */,
 				646AB913273D009D00CC905A /* UIColor-Extension.swift in Sources */,
 				646AB92C273E653D00CC905A /* Firebase-Extension.swift in Sources */,
+				646AB93D27416C7000CC905A /* ProfileTextField.swift in Sources */,
 				646AB917273D22AD00CC905A /* UIButton-Extension.swift in Sources */,
 				646AB92A273E458A00CC905A /* RegisterViewModel.swift in Sources */,
 				646AB8ED273BDB8B00CC905A /* SceneDelegate.swift in Sources */,
