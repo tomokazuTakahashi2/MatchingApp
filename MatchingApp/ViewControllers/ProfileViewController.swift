@@ -8,6 +8,8 @@
 import UIKit
 import RxSwift
 import FirebaseFirestore
+import FirebaseStorage
+import SDWebImage //画像キャッシュ表示
 
 class ProfileViewController: UIViewController {
     
@@ -15,6 +17,7 @@ class ProfileViewController: UIViewController {
     
     var user: User?
     private let cellId = "cellId"
+    private var hasChangedImage = false
     
     private var name = ""
     private var age = ""
@@ -51,21 +54,42 @@ class ProfileViewController: UIViewController {
     
     private func setupBindings() {
         
+        //保存ボタン
         saveButton.rx.tap
             .asDriver()
             .drive {[weak self] _ in
+                guard let self = self else { return }
+                
                 let dic = [
-                    "name": self?.name,
-                    "age": self?.age,
-                    "email": self?.email,
-                    "residence": self?.residence,
-                    "hobby": self?.hobby,
-                    "introduction": self?.introduction
+                    "name": self.name,
+                    "age": self.age,
+                    "email": self.email,
+                    "residence": self.residence,
+                    "hobby": self.hobby,
+                    "introduction": self.introduction
                 ]
                 
-                Firestore.updateUserInfo(dic: dic) {
-                    print("更新完了")
+                if self.hasChangedImage {
+                    //画像を保存する処理
+                    guard let image = self.profileImageView.image else { return }
+                    Storage.addProfileImageToStorage(image: image, dic: dic) {
+                        
+                    }
+                } else {
+                    Firestore.updateUserInfo(dic: dic) {
+                        print("更新完了")
+                    }
                 }
+            }
+            .disposed(by: disposeBag)
+        
+        //プロフィール画像編集ボタン
+        profileEditButton.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                let pickerView = UIImagePickerController() //イメージピッカーを開く
+                pickerView.delegate = self
+                self?.present(pickerView, animated: true, completion: nil)
             }
             .disposed(by: disposeBag)
     }
@@ -92,6 +116,24 @@ class ProfileViewController: UIViewController {
         
         //ユーザー情報を反映
         nameLabel.text = user?.name
+        //プロフィール画像を反映
+        if let url = URL(string: user?.profileImageUrl ?? "") {
+            profileImageView.sd_setImage(with: url) //SDWebImageで表示
+        }
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.originalImage] as? UIImage {
+            
+            profileImageView.image = image.withRenderingMode(.alwaysOriginal)
+        }
+        hasChangedImage = true
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
