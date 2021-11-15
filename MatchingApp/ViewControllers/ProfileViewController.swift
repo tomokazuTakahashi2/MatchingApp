@@ -10,6 +10,7 @@ import RxSwift
 import FirebaseFirestore
 import FirebaseStorage
 import SDWebImage //画像キャッシュ表示
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
@@ -92,6 +93,14 @@ class ProfileViewController: UIViewController {
                 self?.present(pickerView, animated: true, completion: nil)
             }
             .disposed(by: disposeBag)
+        
+        //ログアウトボタン
+        logoutButton.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                self?.logout()
+            }
+            .disposed(by: disposeBag)
     }
     
     private func setupLayout() {
@@ -120,6 +129,27 @@ class ProfileViewController: UIViewController {
         if let url = URL(string: user?.profileImageUrl ?? "") {
             profileImageView.sd_setImage(with: url) //SDWebImageで表示
         }
+    }
+    
+    //ログアウト機能
+    private func logout() {
+        
+        do {
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+
+        } catch {
+            print("ログアウトに失敗: ", error)
+        }
+    }
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else {
+            return
+        }
+        
+        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
     }
 }
 

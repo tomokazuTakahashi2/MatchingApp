@@ -22,12 +22,6 @@ class HomeViewController: UIViewController {
     let topControlView = TopControlView()
     let cardView = UIView()
     let bottomControlView = BottomControlView()
-    
-    let logoutButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("ログアウト", for: .normal)
-        return button
-    }()
 
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
@@ -94,7 +88,6 @@ class HomeViewController: UIViewController {
         stackView.axis = .vertical //縦方向に
         
         self.view.addSubview(stackView)
-        self.view.addSubview(logoutButton)
         
         [
             topControlView.heightAnchor.constraint(equalToConstant: 100),
@@ -105,22 +98,6 @@ class HomeViewController: UIViewController {
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor)]
             .forEach {$0.isActive = true}
-        
-        logoutButton.anchor(bottom: view.bottomAnchor, left: view.leftAnchor, bottomPadding: 10, leftPadding: 10)
-        logoutButton.addTarget(self, action: #selector(tappedLogoutButton), for: .touchUpInside)
-    }
-    
-    @objc private func tappedLogoutButton() {
-        
-        do {
-            try Auth.auth().signOut()
-            let registerController = RegisterViewController()
-            let nav = UINavigationController(rootViewController: registerController)
-            nav.modalPresentationStyle = .fullScreen //フルスクリーン遷移
-            self.present(nav, animated: true) //登録画面へ遷移
-        } catch {
-            print("ログアウトに失敗: ", error)
-        }
     }
     
     private func setupBindings() {
@@ -130,6 +107,7 @@ class HomeViewController: UIViewController {
             .drive { [weak self] _ in
                 let profile = ProfileViewController()
                 profile.user = self?.user
+                profile.presentationController?.delegate = self
                 self?.present(profile, animated: true, completion: nil)
             }
             .disposed(by: disposeBag)
@@ -137,3 +115,18 @@ class HomeViewController: UIViewController {
 
 }
 
+//MARK: - UIAdaptivePresentationControllerDelegate
+extension HomeViewController: UIAdaptivePresentationControllerDelegate {
+    
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        if Auth.auth().currentUser == nil {
+            self.user = nil
+            self.users = []
+            
+            let registerController = RegisterViewController()
+            let nav = UINavigationController(rootViewController: registerController)
+            nav.modalPresentationStyle = .fullScreen //フルスクリーン遷移
+            self.present(nav, animated: true) //登録画面へ遷移
+        }
+    }
+}
