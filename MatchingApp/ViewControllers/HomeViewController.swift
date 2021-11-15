@@ -15,6 +15,7 @@ import RxSwift
 class HomeViewController: UIViewController {
     
     private var user: User?
+    private var isCardAnimating = false
     //自分以外のユーザー情報
     private var users = [User]()
     private let disposeBag = DisposeBag()
@@ -119,6 +120,36 @@ class HomeViewController: UIViewController {
             .asDriver()
             .drive { [weak self] _ in
                 self?.fetchUsers()
+            }
+            .disposed(by: disposeBag)
+        
+        //ノープボタン
+        bottomControlView.nopeView.button?.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                guard let self = self else { return }
+                
+                if !self.isCardAnimating {
+                    self.isCardAnimating = true
+                    self.cardView.subviews.last?.removeCardViewAnimation(x: -600, completion: {
+                        self.isCardAnimating = false
+                    })
+                }
+            }
+            .disposed(by: disposeBag)
+        
+        //ライクボタン
+        bottomControlView.likeView.button?.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                guard let self = self else { return }
+                
+                if !self.isCardAnimating {
+                    self.isCardAnimating = true
+                    self.cardView.subviews.last?.removeCardViewAnimation(x: 600, completion: {
+                        self.isCardAnimating = false
+                    })
+                }
             }
             .disposed(by: disposeBag)
     }
