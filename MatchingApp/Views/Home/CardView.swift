@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CardView: UIView {
     
@@ -232,6 +233,10 @@ class CardView: UIView {
         //ユーザー情報をviewに反映
         nameLabel.text = user.name
         introductionLabel.text = user.email
+        
+        if let url = URL(string: user.profileImageUrl) {
+            cardImageView.sd_setImage(with: url) //SDWebImageで画像を表示
+        }
     }
     
     required init?(coder: NSCoder) {
