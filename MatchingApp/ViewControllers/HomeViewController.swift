@@ -67,6 +67,7 @@ class HomeViewController: UIViewController {
     
     private func fetchUsers() {
         HUD.show(.progress) //グルグルインジケーター
+        self.users = [] //いったんusersの情報を空にする
         Firestore.fetchUsersFromFirestore { (users) in
             HUD.hide() //インジケーターを非表示
             self.users = users
@@ -102,6 +103,7 @@ class HomeViewController: UIViewController {
     
     private func setupBindings() {
         
+        //プロフィールボタン
         topControlView.profileButton.rx.tap
             .asDriver()
             .drive { [weak self] _ in
@@ -109,6 +111,14 @@ class HomeViewController: UIViewController {
                 profile.user = self?.user
                 profile.presentationController?.delegate = self
                 self?.present(profile, animated: true, completion: nil)
+            }
+            .disposed(by: disposeBag)
+        
+        //リロードボタン
+        bottomControlView.reloadView.button?.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                self?.fetchUsers()
             }
             .disposed(by: disposeBag)
     }
